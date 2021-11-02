@@ -3,14 +3,14 @@ package com.netcracker.domain.students;
 
 public class Student {
     private String fullName;
-    private long ID;
+    private long id;
     private String faculty;
 
     public String getFullName(){return fullName;}
     public void setFullName(String name){this.fullName = name;}
 
-    public long getID(){return ID;}
-    public void setID(long id){this.ID = id;}
+    public long getId(){return id;}
+    public void setId(long id){this.id = id;}
 
     public String getFaculty(){return faculty;}
     public void setFaculty(String faculty){this.faculty = faculty;}
@@ -19,17 +19,17 @@ public class Student {
        this.fullName = fullName;
     }
 
-    Student(String fullName, long ID){
+    Student(String fullName, long id){
         this(fullName);
-        this.ID = ID;
+        this.id = id;
     }
 
-    Student(String fullName, long ID, String faculty){
-        this(fullName, ID);
+    Student(String fullName, long id, String faculty){
+        this(fullName, id);
         this.faculty = faculty;
     }
     @Override
     public String toString(){
-        return "Student " + fullName + " with ID ¹" + ID + " is  studying on faculty " + faculty;
+        return "Student " + fullName + " with ID ¹" + id + " is  studying on faculty " + faculty;
     }
 }
