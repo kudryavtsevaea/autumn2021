@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+<<<<<<< HEAD
         System.out.println("-----------APPLES-----------");
         Farm<Apple> appleFarm = new Farm<>();
         appleFarm.setValue(new Apple(), 60);
@@ -23,6 +24,8 @@ public class Main {
 
         Shop shop3 = new Shop(peachFarm);
         shop3.getFromVan(50);
+=======
+>>>>>>> b908bb34e2118766dd3c5ab6291af4f0ada4b32a
 
     }
 }

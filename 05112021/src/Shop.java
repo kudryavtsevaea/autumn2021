@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 public class Shop<T extends Farm>{
     private Farm<T> vans;
 
@@ -17,4 +18,8 @@ public class Shop<T extends Farm>{
         }
     }
 
+=======
+public class Shop {
+    À
+>>>>>>> b908bb34e2118766dd3c5ab6291af4f0ada4b32a
 }
