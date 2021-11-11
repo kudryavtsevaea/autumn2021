@@ -1,5 +1,4 @@
 public class Farm<T> {
-<<<<<<< HEAD
     private T value;
     private int amount;
     private int amountVan;
@@ -67,26 +66,4 @@ class Peach{
     }
 }
 
-=======
-    private T type;
-    private int amount;
 
-    public T getType() {
-        return type;
-    }
-
-    public void setType(T type) {
-        this.type = type;
-    }
-
-    public Farm<T> setVan(T type, int amount){
-        Farm<T> Van = new Farm<T>();
-        Van.amount = amount;
-        return Van;
-    }
-
-
-
-
-}
->>>>>>> b908bb34e2118766dd3c5ab6291af4f0ada4b32a
