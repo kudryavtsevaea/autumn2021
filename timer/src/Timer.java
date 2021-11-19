@@ -1,49 +1,26 @@
 class Timer extends Thread {
+    private static int seconds = 0;
 
-    private static int seconds = 1;
-
-    public static void stopThread(Thread timer) {
-        if (!timer.isInterrupted()){
-            timer.interrupt();
-        }
-        System.out.println("Stop");
+    public static int getSeconds() {
+        return seconds;
     }
 
-    public static void startThread(Thread timer){
-        if(timer.isInterrupted()){
-            timer.run();
-        }
-        System.out.println("Start");
-    }
-
-    public static void restartThread(Thread timer){
-        if (!timer.isInterrupted()) {
-            timer.interrupt();
-        }
-        seconds = 1;
-        timer.run();
-        System.out.println("Restart");
+    public static void setSeconds(int seconds) {
+        Timer.seconds = seconds;
     }
 
     @Override
     public void run() {
-        try{
-            int i = 0;
-            while(i < 60) {
-                if (!isInterrupted()){
-                    System.out.println(seconds);
-                    seconds++;
-                    sleep(1000);
-                    i++;
+            Thread current = Thread.currentThread();
+            while (!current.isInterrupted()) {
+                try {
+                    Thread.sleep(1000);
+                    System.out.println(seconds + " ");
+                    seconds ++;
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-                else{
-                    throw new InterruptedException();
-                }
-            }
 
+            }
         }
-        catch (Exception e){
-            e.printStackTrace();
-        }
-    }
 }
