@@ -1,2 +1,7 @@
-package com.netcracker.project;public interface LibraryStructure {
+package com.netcracker.project;
+
+public interface LibraryStructure {
+    void getTheOperation();
+
+
 }
