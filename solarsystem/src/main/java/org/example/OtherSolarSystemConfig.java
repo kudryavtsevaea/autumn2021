@@ -10,4 +10,5 @@ public class OtherSolarSystemConfig {
     @Bean
     @Prototype
     public static Comet getComet2() { return new Comet("H82"); }
+
 }
