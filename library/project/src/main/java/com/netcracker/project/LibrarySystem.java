@@ -2,7 +2,7 @@ package com.netcracker.project;
 
 import java.util.Scanner;
 
-//controller class
+//view class, controller???
 public class LibrarySystem implements LibraryStructure{
 
     @Override
