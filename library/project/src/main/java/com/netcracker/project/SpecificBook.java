@@ -4,6 +4,7 @@ import java.awt.print.Book;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.HashMap;
 
 public class SpecificBook extends Book {
     private String author;
@@ -12,6 +13,8 @@ public class SpecificBook extends Book {
     private int amountOfPages;
 
     private int inventoryNumber;
+
+    private HashMap<Integer, String> specificbooks = new HashMap<>();
 
     public String getAuthor() {
         return author;
@@ -33,16 +36,13 @@ public class SpecificBook extends Book {
         return inventoryNumber;
     }
 
-    private static SpecificBook INSTANCE = new SpecificBook();
-
-    private SpecificBook(){
-       // addSpecificBook(INSTANCE, connection);
+    public SpecificBook(String author, String nameOfBook, int yearOfPublishing, int amountOfPages, int inventoryNumber) {
+        this.author = author;
+        this.nameOfBook = nameOfBook;
+        this.yearOfPublishing = yearOfPublishing;
+        this.amountOfPages = amountOfPages;
+        this.inventoryNumber = inventoryNumber;
     }
-
-    public static SpecificBook getInstance(){
-        return INSTANCE;
-    }
-
 
     public static void addSpecificBook(SpecificBook book, Connection connection) throws SQLException {
         PreparedStatement preparedStatement = connection.prepareStatement(INSERT_SPECIFIC_BOOK);
