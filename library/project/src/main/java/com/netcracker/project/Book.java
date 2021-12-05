@@ -34,6 +34,22 @@ public class Book {
         return amountOfPages;
     }
 
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setNameOfBook(String nameOfBook) {
+        this.nameOfBook = nameOfBook;
+    }
+
+    public void setYearOfPublishing(int yearOfPublishing) {
+        this.yearOfPublishing = yearOfPublishing;
+    }
+
+    public void setAmountOfPages(int amountOfPages) {
+        this.amountOfPages = amountOfPages;
+    }
+
     @Override
     public String toString() {
         return "Book{" +

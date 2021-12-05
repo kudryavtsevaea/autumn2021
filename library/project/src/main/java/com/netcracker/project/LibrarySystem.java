@@ -1,44 +1,26 @@
 package com.netcracker.project;
 
+import javafx.scene.input.KeyCode;
+
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.Scanner;
 
 //view class, controller???
-public class LibrarySystem implements LibraryStructure{
+public class LibrarySystem{
 
-    @Override
-    public void getTheOperation() {
+    public static void printMenu(){
         System.out.println("Доступные команды:\n" +
-                "1. Просмотреть взятые книги;\n" +
-                "2. Взять книгу;\n" +
-                "3. Вернуть книгу;\n" +
-                "4. Найти книгу в библиотеке;\n" +
-                "5. Найти книгу в архиве.");
-        System.out.print("Введите число от 1 до 5, соответствующее необходимой операции:");
-
-        try (Scanner sc = new Scanner(System.in)){
-            String operation = sc.nextLine();
-            switch (operation){
-                case "1": {
-
-                };
-                case "2": {
-
-                };
-                case "3": {
-
-                }
-                case "4": {
-
-                }
-                case "5": {
-
-                }
-                default:
-                    System.out.println("Некорректная операция!");
-            }
-        }
-
+                "0. Просмотреть взятые книги;\n" +
+                "1. Взять книгу;\n" +
+                "2. Вернуть книгу;\n" +
+                "3. Найти книгу в библиотеке;\n" +
+                "4. Просмотреть все книги;\n" +
+                "5. Добавить пользователя;\n" +
+                "6. Удалить пользователя; \n" +
+                "7. Удалить книгу;\n" +
+                "8. Добавить книгу; \n" +
+                "9. Просмотреть всех пользователей.");
+        System.out.print("Выберете операцию : ");
     }
-
-
 }
