@@ -1,12 +1,7 @@
 package com.netcracker.project;
 
-import org.apache.catalina.util.LifecycleBase;
-
-import javax.swing.*;
-import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.io.Console;
 import java.sql.SQLException;
 import java.util.Scanner;
 
@@ -92,6 +87,16 @@ public class KeyListeners implements KeyListener {
         else if (e.getKeyCode() == KeyEvent.VK_9){
             //просмотреть всех пользователей
             lib.showAllUsers();
+            System.out.println("<- Назад         Выход(q)");
+        }
+        else if (e.getKeyCode() == KeyEvent.VK_W){
+            //изменить поле читателя
+
+            System.out.println("<- Назад         Выход(q)");
+        }
+        else if (e.getKeyCode() == KeyEvent.VK_E){
+            //изменить поле книги
+
             System.out.println("<- Назад         Выход(q)");
         }
         else if (e.getKeyCode() == KeyEvent.VK_LEFT){

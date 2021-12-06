@@ -1,24 +1,31 @@
 package com.netcracker.project;
 
+import groovy.sql.DataSet;
+
+import java.io.File;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Properties;
 import java.util.stream.Collectors;
 
 //model class
 public class Library {
 
     private List<Book> books;
-    private List<SpecificBook<Integer, Book>> specifBooks;
+    private List<SpecificBook> specifBooks;
     private List<User> users;
-    Connection connection = DriverManager
-            .getConnection("jdbc:mysql://127.0.0.1:3306/librarydb", "root", "kryasan2");
-
     private static Library INSTANCE = null;
+    Connection connection = DriverManager.getConnection
+                ("jdbc:mysql://127.0.0.1:3306/librarydb", "root", "kryasan2");
 
     private Library() throws SQLException {
-       // try(Connection connection = DriverManager.getConnection
-         //       ("jdbc:mysql://127.0.0.1:3306/librarydb", "root", "kryasan2")){
+        //File file = new File("E:\\NetCracker2021\\autumn2021\\library\\project" +
+        //      "\\src\\main\\resources\\data.properties");
+
+       // Properties properties = new Properties();
+       // properties.loadFromXML();
             PreparedStatement preparedStatement1 = connection.prepareStatement("select * from book");
             ResultSet resultSet1 = preparedStatement1.executeQuery();
             while (resultSet1.next()) {
@@ -34,11 +41,14 @@ public class Library {
                         resultSet2.getBoolean(3), resultSet2.getInt(4));
                 users.add(user);
             }
-
-        //}
-        //catch (SQLException throwables) {
-          //  throwables.printStackTrace();
-        //}
+//
+//            PreparedStatement preparedStatement3 = connection.prepareStatement("select * from specificbook");
+//            ResultSet resultset3 = preparedStatement3.executeQuery();
+//            for (Book b : books){
+//            while (resultset3.next()){
+//                specifBooks.replace(resultset3.getInt(1), b);
+//            }
+//            }
 
     }
         public static Library getInstance() throws SQLException {

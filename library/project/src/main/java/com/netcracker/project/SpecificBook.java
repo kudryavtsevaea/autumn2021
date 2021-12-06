@@ -9,22 +9,21 @@ public class SpecificBook<I extends Number, B> extends Book {
 
     private boolean isHandedOut;
     private int inventoryNumber;
-
-    private HashMap<Integer, Book> specificbooks = new HashMap<>();
+    private Book book;
+   // private HashMap<Integer, Book> specificbooks = new HashMap<>();
 
     public int getInventoryNumber() {
         return inventoryNumber;
     }
 
-    public SpecificBook(String author, String nameOfBook
-            , int yearOfPublishing, int amountOfPages, int inventoryNumber) {
-        super();
-        this.inventoryNumber = inventoryNumber;
+    public boolean isHandedOut() {
+        return isHandedOut;
     }
 
-//    public static void addSpecificBookXmL(SpecificBook book){
-//        DataSet ds = new DataSet();
-//        ds.Tables.Add("DataTableName");
-//        ds.GetXml();
-//    }
+    public SpecificBook(int inventoryNumberString, String author, String nameOfBook
+            , int yearOfPublishing, int amountOfPages) {
+        this.book = new Book();
+        this.inventoryNumber = inventoryNumber;
+        this.isHandedOut = false;
+    }
 }
