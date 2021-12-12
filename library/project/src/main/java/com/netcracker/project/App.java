@@ -6,6 +6,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -32,6 +33,28 @@ public class App extends SpringBootServletInitializer
 //            }
 //            connection.commit();
 //        }
+
+        LibrarySystem librarySystem = new LibrarySystem();
+        KeyListeners keyListeners = new KeyListeners();
+        librarySystem.printMenu();
+        Scanner sc = new Scanner(System.in);
+        while (true) {
+            String operation = sc.nextLine();
+            if (operation.equals("0") || operation.equals("1") || operation.equals("<") || operation.equals("q")) {
+                if (operation.equals("0")) {
+                    keyListeners.keyPressed("0");
+                } else if (operation.equals("1")) {
+                   keyListeners.keyPressed("1");
+                } else if (operation.equals("<")){
+                   keyListeners.keyPressed("<");
+                }
+                else
+                {
+                    keyListeners.keyPressed("q");
+                }
+
+            }
+        }
 
     }
 }

@@ -6,13 +6,11 @@ import java.awt.print.Book;
 import java.util.HashMap;
 
 public class SpecificBook<I extends Number, B> extends Book {
-
-    private boolean isHandedOut;
-    private int inventoryNumber;
+    private long inventoryNumber;
     private Book book;
-   // private HashMap<Integer, Book> specificbooks = new HashMap<>();
+    private boolean isHandedOut;
 
-    public int getInventoryNumber() {
+    public long getInventoryNumber() {
         return inventoryNumber;
     }
 
@@ -20,7 +18,11 @@ public class SpecificBook<I extends Number, B> extends Book {
         return isHandedOut;
     }
 
-    public SpecificBook(int inventoryNumberString, String author, String nameOfBook
+    public void setHandedOut(boolean handedOut) {
+        isHandedOut = handedOut;
+    }
+
+    public SpecificBook(long inventoryNumber, String author, String nameOfBook
             , int yearOfPublishing, int amountOfPages) {
         this.book = new Book();
         this.inventoryNumber = inventoryNumber;

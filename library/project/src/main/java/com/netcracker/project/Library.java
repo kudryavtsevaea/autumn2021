@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 public class Library {
 
     private List<Book> books;
-    private List<SpecificBook> specifBooks;
+    private List<SpecificBook> specificBooks;
     private List<User> users;
     private static Library INSTANCE = null;
     Connection connection = DriverManager.getConnection
@@ -41,14 +41,15 @@ public class Library {
                         resultSet2.getBoolean(3), resultSet2.getInt(4));
                 users.add(user);
             }
-//
-//            PreparedStatement preparedStatement3 = connection.prepareStatement("select * from specificbook");
-//            ResultSet resultset3 = preparedStatement3.executeQuery();
-//            for (Book b : books){
-//            while (resultset3.next()){
-//                specifBooks.replace(resultset3.getInt(1), b);
-//            }
-//            }
+
+            PreparedStatement preparedStatement3 = connection.prepareStatement("select * from specificBookWithInfo");
+            ResultSet resultset3 = preparedStatement3.executeQuery();
+            while (resultset3.next()){
+                SpecificBook specificBook = new SpecificBook(resultset3.getLong(1), resultset3.getString(2),
+                        resultset3.getString(3), resultset3.getInt(4),
+                        resultset3.getInt(5));
+                specificBooks.add(specificBook);
+            }
 
     }
         public static Library getInstance() throws SQLException {
@@ -71,32 +72,53 @@ public class Library {
     }
 
     public void getBook(String name){
-        System.out.println(specifBooks.stream().filter((b) -> b.equals(name))
+        System.out.println(specificBooks.stream().filter((b) -> b.equals(name))
                 .collect(Collectors.toList()));
+        specificBooks.stream().filter((b) -> b.equals(name)).findFirst().get().setHandedOut(true);
         //добавить изменение флага
     }
 
-    public static final String DELETE_USER = "delete from reader where readerName = name";
+   // public static final String DELETE_USER = "delete from reader where readerName = name";
 
-    public void deleteReader(String name) throws SQLException {
+//    public void deleteReader(String name) throws SQLException {
+//        if (users.contains(name)) {
+//            PreparedStatement preparedStatement = connection.prepareStatement(DELETE_USER);
+//        }
+//        else {
+//            System.out.println("Данный пользователь не существует");
+//        }
+//    }
+
+    public void deleteReader(String name){
         if (users.contains(name)) {
-            PreparedStatement preparedStatement = connection.prepareStatement(DELETE_USER);
+           users.remove(name);
         }
         else {
             System.out.println("Данный пользователь не существует");
         }
     }
 
-    public static final String DELETE_BOOK = "delete from book where nameOfBook = name";
+//    public static final String DELETE_BOOK = "delete from book where nameOfBook = name";
+//
+//     public void deleteBook(String name) throws SQLException {
+//         if (books.contains(name)){
+//        PreparedStatement preparedStatement = connection.prepareStatement(DELETE_BOOK);
+//         }
+//         else {
+//             System.out.println("Данной книге нет в библиотеке");
+//         }
+//     }
 
-     public void deleteBook(String name) throws SQLException {
-         if (books.contains(name)){
-        PreparedStatement preparedStatement = connection.prepareStatement(DELETE_BOOK);
-         }
-         else {
-             System.out.println("Данной книге нет в библиотеке");
-         }
-     }
+    public void deleteBook(String name){
+        if (books.contains(name)) {
+           books.remove(name);
+        }
+        else {
+            System.out.println("Данный пользователь не существует");
+        }
+    }
+
+
 
     public void showAllBooksOnHands() throws SQLException {
         PreparedStatement preparedStatement = connection.prepareStatement(FIND_BOOK_ON_HANDS);
@@ -129,13 +151,18 @@ public class Library {
     public static final String INSERT_READER = "insert into readerWithBook " +
             "(\"readerName\",\"hasBook\", \"whichBook\")  values (?,?,?)";
 
-    public static final String FIND_BOOK = "select * from book where nameOfBook = name";
+//    public static final String FIND_BOOK = "select * from book where nameOfBook = name";
+//
+//    public void findBookByName() throws SQLException {
+//        PreparedStatement preparedStatement = connection.prepareStatement(FIND_BOOK);
+//        ResultSet resultSet = preparedStatement.executeQuery();
+//        System.out.println(resultSet.getString(1) + " " + resultSet.getString(2) +
+//             " " + resultSet.getInt(3) +  " " + resultSet.getInt(4));
+//    }
 
-    public void findBookByName() throws SQLException {
-        PreparedStatement preparedStatement = connection.prepareStatement(FIND_BOOK);
-        ResultSet resultSet = preparedStatement.executeQuery();
-        System.out.println(resultSet.getString(1) + " " + resultSet.getString(2) +
-             " " + resultSet.getInt(3) +  " " + resultSet.getInt(4));
+    public void findBookByName(String name) {
+        System.out.println(books.stream().filter((book -> book.getNameOfBook()
+                .equals(name))).findFirst().get());
     }
 
 }

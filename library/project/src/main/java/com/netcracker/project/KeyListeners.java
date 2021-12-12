@@ -5,26 +5,20 @@ import java.awt.event.KeyListener;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class KeyListeners implements KeyListener {
+public class KeyListeners{
 
     private Library lib;
 
-    @Override
-    public void keyTyped(KeyEvent e) {
-
-    }
-
-    @Override
-    public void keyPressed(KeyEvent e) {
+    public void keyPressed(String e) {
         String info;
         try (Scanner sc = new Scanner(System.in)){
             info = sc.nextLine();
         }
-        if (e.getKeyCode() == KeyEvent.VK_Q){
+        if (e == "q"){
             System.out.println("До свидания!");
             System.exit(0);
         }
-        else if (e.getKeyCode() == KeyEvent.VK_0){
+        else if (e == "0"){
             //просмотреть все взятые книги
             try {
                 lib.showAllBooksOnHands();
@@ -33,81 +27,64 @@ public class KeyListeners implements KeyListener {
             }
             System.out.println("<- Назад         Выход(q)");
         }
-        else if (e.getKeyCode() == KeyEvent.VK_1){
+        else if (e == "1"){
             //взять книгу
             lib.getBook(info);
             System.out.println("<- Назад         Выход(q)");
         }
-        else if (e.getKeyCode() == KeyEvent.VK_2){
+        else if (e == "2"){
             //вернуть книгу
 
             System.out.println("<- Назад         Выход(q)");
         }
-        else if (e.getKeyCode() == KeyEvent.VK_3){
+        else if (e == "3"){
             //найти книгу
-            try {
-                lib.findBookByName();
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-            }
+            lib.findBookByName(info);
             System.out.println("<- Назад         Выход(q)");
         }
-        else if (e.getKeyCode() == KeyEvent.VK_4){
+        else if (e == "4"){
             lib.showAllBooks();
             System.out.println("<- Назад         Выход(q)");
         }
-        else if (e.getKeyCode() == KeyEvent.VK_5){
+        else if (e == "5"){
             //добавить пользователя
             //addUser
             System.out.println("<- Назад         Выход(q)");
         }
-        else if (e.getKeyCode() == KeyEvent.VK_6){
+        else if (e == "6"){
             //удалить пользователя
-            try {
-                lib.deleteReader(info);
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-            }
+            lib.deleteReader(info);
             System.out.println("<- Назад         Выход(q)");
         }
-        else if (e.getKeyCode() == KeyEvent.VK_7){
+        else if (e == "7"){
             //удалить книгу
-            try {
-                lib.deleteBook(info);
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-            }
+            lib.deleteBook(info);
             System.out.println("<- Назад         Выход(q)");
         }
-        else if (e.getKeyCode() == KeyEvent.VK_8){
+        else if (e == "8"){
             //добавить книгу
             //addBook
             System.out.println("<- Назад         Выход(q)");
         }
-        else if (e.getKeyCode() == KeyEvent.VK_9){
+        else if (e == "9"){
             //просмотреть всех пользователей
             lib.showAllUsers();
             System.out.println("<- Назад         Выход(q)");
         }
-        else if (e.getKeyCode() == KeyEvent.VK_W){
+        else if (e == "10"){
             //изменить поле читателя
 
             System.out.println("<- Назад         Выход(q)");
         }
-        else if (e.getKeyCode() == KeyEvent.VK_E){
+        else if (e == "11"){
             //изменить поле книги
 
             System.out.println("<- Назад         Выход(q)");
         }
-        else if (e.getKeyCode() == KeyEvent.VK_LEFT){
+        else if (e == "<"){
             //переход в меню
             LibrarySystem.printMenu();
         }
-    }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
-
     }
 
 }
