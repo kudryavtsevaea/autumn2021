@@ -1,21 +1,17 @@
 package com.netcracker.project;
 
-import groovy.sql.DataSet;
-
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 import java.util.stream.Collectors;
 
 //model class
 public class Library {
 
-    private List<Book> books;
-    private List<SpecificBook> specificBooks;
-    private List<User> users;
+    private Set<Book> books;
+    private Set<SpecificBook> specificBooks;
+    private Set<User> users;
     private static Library INSTANCE = null;
     Connection connection = DriverManager.getConnection
                 ("jdbc:mysql://127.0.0.1:3306/librarydb", "root", "kryasan2");
@@ -75,7 +71,6 @@ public class Library {
         System.out.println(specificBooks.stream().filter((b) -> b.equals(name))
                 .collect(Collectors.toList()));
         specificBooks.stream().filter((b) -> b.equals(name)).findFirst().get().setHandedOut(true);
-        //добавить изменение флага
     }
 
    // public static final String DELETE_USER = "delete from reader where readerName = name";
@@ -114,7 +109,7 @@ public class Library {
            books.remove(name);
         }
         else {
-            System.out.println("Данный пользователь не существует");
+            System.out.println("Данной книги нет в библиотеке");
         }
     }
 
@@ -163,6 +158,50 @@ public class Library {
     public void findBookByName(String name) {
         System.out.println(books.stream().filter((book -> book.getNameOfBook()
                 .equals(name))).findFirst().get());
+    }
+
+    public void addListOfBooks(File file){
+        try(Scanner sc = new Scanner(file)){
+            while(sc.hasNextLine()){
+                String s = sc.next();
+                String[] str = s.split(";");
+                Book book = new Book(str[0],str[1],Integer.parseInt(str[2]),Integer.parseInt(str[3]));
+                books.add(book);
+            }
+        }
+        catch(FileNotFoundException e){
+            System.out.println("Файл не найден");
+        }
+    }
+
+    public void addListOfUsers(File file){
+        try (Scanner sc = new Scanner(file)){
+            while (sc.hasNextLine()){
+                String s = sc.next();
+                String[] str = s.split(";");
+                User user = new User(Integer.parseInt(str[0]),str[1],Boolean.getBoolean(str[2])
+                        ,Integer.parseInt(str[3]));
+                users.add(user);
+            }
+        }
+        catch(FileNotFoundException e){
+            System.out.println("Файл не найден");
+        }
+    }
+
+    public void addListOfSpecificBook(File file){
+        try (Scanner sc = new Scanner(file)){
+            while (sc.hasNextLine()){
+                String s = sc.next();
+                String[] str = s.split(";");
+                SpecificBook specificBook = new SpecificBook(Integer.parseInt(str[0]),
+                        str[1],str[2],Integer.parseInt(str[3]),Integer.parseInt(str[4]));
+                specificBooks.add(specificBook);
+            }
+        }
+        catch(FileNotFoundException e){
+            System.out.println("Файл не найден");
+        }
     }
 
 }
