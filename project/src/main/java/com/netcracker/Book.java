@@ -1,3 +1,5 @@
+package com.netcracker;
+
 public class Book {
     private String author;
     private String nameOfBook;
@@ -53,3 +55,4 @@ public class Book {
                 '}';
     }
 }
+

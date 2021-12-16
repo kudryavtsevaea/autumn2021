@@ -1,3 +1,5 @@
+package com.netcracker;
+
 import java.awt.print.Book;
 
 public class SpecificBook<I extends Number, B> extends Book {
