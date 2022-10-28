@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b762a7796d94449896cd40528add32, type: 3}
+  m_Name: Unit5Data
+  m_EditorClassIdentifier: 
+  questions:
+  - questionImage: {fileID: 21300000, guid: 9351ed51f4457a548a2e721e907502a6, type: 3}
+    answer: endangered
+    hint: "\u0432\u044B\u043C\u0438\u0440\u0430\u044E\u0449\u0438\u0439"
+  - questionImage: {fileID: 21300000, guid: cc56a9aaea142b54baee69103d5af6bd, type: 3}
+    answer: environment
+    hint: "\u043E\u043A\u0440\u0443\u0436\u0430\u044E\u0449\u0430\u044F \u0441\u0440\u0435\u0434\u0430"
+  - questionImage: {fileID: 21300000, guid: 13520f6028eeeda4c809d5a151ec60ce, type: 3}
+    answer: long-term
+    hint: "\u0434\u043B\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439"
+  - questionImage: {fileID: 21300000, guid: e0f079512abb0dd48a1f82226ae12557, type: 3}
+    answer: conservation
+    hint: "\u043E\u0445\u0440\u0430\u043D\u0430 \u043F\u0440\u0438\u0440\u043E\u0434\u044B"
+  - questionImage: {fileID: 21300000, guid: 61cf4998e292d7d4885aa4f4cd8c4155, type: 3}
+    answer: pollution
+    hint: "\u0437\u0430\u0433\u0440\u044F\u0437\u043D\u0435\u043D\u0438\u0435"
+  - questionImage: {fileID: 21300000, guid: bdb1592dbaefd3444b5cae8319074a28, type: 3}
+    answer: prevent
+    hint: "\u043F\u0440\u0435\u0434\u043E\u0442\u0432\u0440\u0430\u0449\u0430\u0442\u044C"
+  - questionImage: {fileID: 21300000, guid: 6370b61848d0eeb40bf8a90bcaaace63, type: 3}
+    answer: recycle
+    hint: "\u043F\u0435\u0440\u0435\u0440\u0430\u0431\u0430\u0442\u044B\u0432\u0430\u0442\u044C"
+  - questionImage: {fileID: 21300000, guid: 0638b2cc7f3b9574bb4c44892a5e6726, type: 3}
+    answer: biodiversity
+    hint: "\u0431\u0438\u043E\u0440\u0430\u0437\u043D\u043E\u043E\u0431\u0440\u0430\u0437\u0438\u0435"
+  - questionImage: {fileID: 21300000, guid: 518ab078b3365224190b4e5dec89cb8c, type: 3}
+    answer: species
+    hint: "\u0432\u0438\u0434"
+  - questionImage: {fileID: 21300000, guid: 68157ec5f5aca924bae9a0a5062fc064, type: 3}
+    answer: hunting
+    hint: "\u043E\u0445\u043E\u0442\u0430"
+  - questionImage: {fileID: 21300000, guid: b4328a438aab727439579813e5ff323d, type: 3}
+    answer: destruction
+    hint: "\u0440\u0430\u0437\u0440\u0443\u0448\u0435\u043D\u0438\u0435"
+  - questionImage: {fileID: 21300000, guid: afe4e7df02ab4134f905f68a105ddd9d, type: 3}
+    answer: conserve
+    hint: "\u0441\u043E\u0445\u0440\u0430\u043D\u044F\u0442\u044C"
+  - questionImage: {fileID: 21300000, guid: 3a97f86649eb9344ca822929913eafd5, type: 3}
+    answer: estimate
+    hint: "\u043E\u0446\u0435\u043D\u043A\u0430"
+  - questionImage: {fileID: 21300000, guid: 66ecaa1851120b8419bc043be1c21a9f, type: 3}
+    answer: tribe
+    hint: "\u043F\u043B\u0435\u043C\u044F"
+  - questionImage: {fileID: 21300000, guid: 5391a9f501d6b0640847adffe8770614, type: 3}
+    answer: hornbill
+    hint: "\u043F\u0442\u0438\u0446\u0430-\u043D\u043E\u0441\u043E\u0440\u043E\u0433"
+  - questionImage: {fileID: 21300000, guid: f66bd9a0913f5954f81cebca9aed5eb7, type: 3}
+    answer: wetlands
+    hint: "\u0432\u043E\u0434\u043D\u043E-\u0431\u043E\u043B\u043E\u0442\u043D\u044B\u0435
+      \u0443\u0433\u043E\u0434\u044C\u044F"
+  - questionImage: {fileID: 21300000, guid: 9b4aaef51b8c93d418278489c28d40fd, type: 3}
+    answer: habitat
+    hint: "\u0441\u0440\u0435\u0434\u0430 \u043E\u0431\u0438\u0442\u0430\u043D\u0438\u044F"
+  - questionImage: {fileID: 21300000, guid: 1efdc6336b4ea894caa4afd03a87a1de, type: 3}
+    answer: velcro
+    hint: "\u043B\u0438\u043F\u0443\u0447\u043A\u0430"
+  - questionImage: {fileID: 21300000, guid: 5af0a54ee8e475f4b8e6284b740a6d63, type: 3}
+    answer: attach
+    hint: "\u043F\u0440\u0438\u0441\u043E\u0435\u0434\u0438\u043D\u044F\u0442\u044C"
+  - questionImage: {fileID: 21300000, guid: 36f66c070fcdf3b45b7d6ccdc04ed1da, type: 3}
+    answer: fall off
+    hint: "\u043F\u0430\u0434\u0430\u0442\u044C"
+  - questionImage: {fileID: 21300000, guid: 65501fa00e661c541aa00ee0ca144e2b, type: 3}
+    answer: scales
+    hint: "\u0447\u0435\u0448\u0443\u0439\u043A\u0438"
+  - questionImage: {fileID: 21300000, guid: ec90e177e88205542b185474b70a5fa2, type: 3}
+    answer: palm tree
+    hint: "\u043F\u0430\u043B\u044C\u043C\u0430"
+  - questionImage: {fileID: 21300000, guid: 7e205ba2c479cb8428390bbfe8cf5ba4, type: 3}
+    answer: pine tree
+    hint: "\u0441\u043E\u0441\u043D\u0430"
+  - questionImage: {fileID: 21300000, guid: a5bdf284c2c4f9c41b87569a37882dc1, type: 3}
+    answer: adapt
+    hint: "\u043F\u0440\u0438\u0441\u043F\u043E\u0441\u0430\u0431\u043B\u0438\u0432\u0430\u0442\u044C\u0441\u044F"
+  - questionImage: {fileID: 21300000, guid: f12231005cfea384cb38b406ec7efc16, type: 3}
+    answer: petal
+    hint: "\u043B\u0435\u043F\u0435\u0441\u0442\u043E\u043A"
+  - questionImage: {fileID: 21300000, guid: d77539e054dcacb42a626700d9021f65, type: 3}
+    answer: branch
+    hint: "\u0432\u0435\u0442\u043A\u0430"
+  - questionImage: {fileID: 21300000, guid: 93768388791d0ca4bace40ab4d134d9a, type: 3}
+    answer: resign
+    hint: "\u0443\u0432\u043E\u043B\u044C\u043D\u044F\u0442\u044C\u0441\u044F"
+  - questionImage: {fileID: 21300000, guid: fb4d654493a57804690dad53fa300d98, type: 3}
+    answer: ashore
+    hint: "\u043A \u0431\u0435\u0440\u0435\u0433\u0443"
+  - questionImage: {fileID: 21300000, guid: 994e1a24df8258947851942315307fd7, type: 3}
+    answer: whale
+    hint: "\u043A\u0438\u0442"
+  - questionImage: {fileID: 21300000, guid: 1d7ccdb6bb608574d9acb69c3cb7ce00, type: 3}
+    answer: tackle
+    hint: "\u0440\u0435\u0448\u0430\u0442\u044C \u043F\u0440\u043E\u0431\u043B\u0435\u043C\u0443"
+  - questionImage: {fileID: 21300000, guid: 78e0c6c5eea0e1a49bfcf38149dfdeec, type: 3}
+    answer: valley
+    hint: "\u0434\u043E\u043B\u0438\u043D\u0430"

@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b762a7796d94449896cd40528add32, type: 3}
+  m_Name: Unit2Data
+  m_EditorClassIdentifier: 
+  questions:
+  - questionImage: {fileID: 21300000, guid: 1827e049a6b3c5b439ad3fb7c1efff76, type: 3}
+    answer: workplace
+    hint: "\u0440\u0430\u0431\u043E\u0447\u0435\u0435 \u043C\u0435\u0441\u0442\u043E"
+  - questionImage: {fileID: 21300000, guid: 427b3a6c87e6afa4fb66c0b134029e95, type: 3}
+    answer: interview
+    hint: "\u0441\u043E\u0431\u0435\u0441\u0435\u0434\u043E\u0432\u0430\u043D\u0438\u0435"
+  - questionImage: {fileID: 21300000, guid: c8c9ddc4c79531d499c37a863bbf6f0c, type: 3}
+    answer: CV
+    hint: "\u0440\u0435\u0437\u044E\u043C\u0435"
+  - questionImage: {fileID: 21300000, guid: 92d9e8e1fc12538438632fba69fad378, type: 3}
+    answer: skill
+    hint: "\u043D\u0430\u0432\u044B\u043A"
+  - questionImage: {fileID: 21300000, guid: d340a58de3d401f4ebdba009f7b3dde2, type: 3}
+    answer: candidate
+    hint: "\u043A\u0430\u043D\u0434\u0438\u0434\u0430\u0442"
+  - questionImage: {fileID: 21300000, guid: 951da9f3c15735641abeb9bf285f07b1, type: 3}
+    answer: employee
+    hint: "\u0441\u043B\u0443\u0436\u0430\u0449\u0438\u0439"
+  - questionImage: {fileID: 21300000, guid: 183e2c29b91d68641a3593faee527f3a, type: 3}
+    answer: employer
+    hint: "\u0440\u0430\u0431\u043E\u0442\u043E\u0434\u0430\u0442\u0435\u043B\u044C"
+  - questionImage: {fileID: 21300000, guid: 8cb173ef6c79aad4abcc1af651518155, type: 3}
+    answer: in charge of
+    hint: "\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0439"
+  - questionImage: {fileID: 21300000, guid: 8a7b47011b858984eb4fa86f9fe8e761, type: 3}
+    answer: self-confidence
+    hint: "\u0443\u0432\u0435\u0440\u0435\u043D\u043D\u043E\u0441\u0442\u044C \u0432
+      \u0441\u0435\u0431\u0435"
+  - questionImage: {fileID: 21300000, guid: 3197a2fcefb99e5469ea764b9530d861, type: 3}
+    answer: personality
+    hint: "\u0445\u0430\u0440\u0430\u043A\u0442\u0435\u0440"
+  - questionImage: {fileID: 21300000, guid: 91b612e29a4765f40815c316ac49d1cc, type: 3}
+    answer: qualifications
+    hint: "\u0434\u0438\u043F\u043B\u043E\u043C"
+  - questionImage: {fileID: 21300000, guid: 5a286d6f724a1734bbfa93092948d914, type: 3}
+    answer: quality
+    hint: "\u043A\u0430\u0447\u0435\u0441\u0442\u0432\u043E"
+  - questionImage: {fileID: 21300000, guid: fbb406b1d22beaa4a84413274241e1b4, type: 3}
+    answer: likeability
+    hint: "\u0441\u0438\u043C\u043F\u0430\u0442\u0438\u044F"
+  - questionImage: {fileID: 21300000, guid: a90cac370b9cb7c4a8348f6ebb22d7f8, type: 3}
+    answer: browser
+    hint: "\u0431\u0440\u0430\u0443\u0437\u0435\u0440"
+  - questionImage: {fileID: 21300000, guid: cb38553e8576b9841b88a258b68d4d85, type: 3}
+    answer: upload
+    hint: "\u0432\u044B\u0433\u0440\u0443\u0436\u0430\u0442\u044C"
+  - questionImage: {fileID: 21300000, guid: 95492b5a7217ba544bd004fd46d1de29, type: 3}
+    answer: password
+    hint: "\u043F\u0430\u0440\u043E\u043B\u044C"
+  - questionImage: {fileID: 21300000, guid: 616aecfb051b01c4ab0733ff9c49cc6b, type: 3}
+    answer: install
+    hint: "\u0443\u0441\u0442\u0430\u043D\u0430\u0432\u043B\u0438\u0432\u0430\u0442\u044C"
+  - questionImage: {fileID: 21300000, guid: 8344017a77818394b8e1392f0d9e6c71, type: 3}
+    answer: download
+    hint: "\u0437\u0430\u0433\u0440\u0443\u0436\u0430\u0442\u044C"
+  - questionImage: {fileID: 21300000, guid: 22422af9ce8e90542809af3123674bb5, type: 3}
+    answer: tablet
+    hint: "\u043F\u043B\u0430\u043D\u0448\u0435\u0442"
+  - questionImage: {fileID: 21300000, guid: 8c1246bf436785240aee105056e85a82, type: 3}
+    answer: type
+    hint: "\u043F\u0435\u0447\u0430\u0442\u0430\u0442\u044C"
+  - questionImage: {fileID: 21300000, guid: d1a10552e620dc84f8e55ec3cf58487e, type: 3}
+    answer: smartphone
+    hint: "\u0441\u043C\u0430\u0440\u0442\u0444\u043E\u043D"
+  - questionImage: {fileID: 21300000, guid: 5fe7d5f30e53a494b9a127950effb2c7, type: 3}
+    answer: screen
+    hint: "\u044D\u043A\u0440\u0430\u043D"
+  - questionImage: {fileID: 21300000, guid: c45bde5e2bfef7b49a835d1e7d97a7f0, type: 3}
+    answer: enquire
+    hint: "\u0441\u043F\u0440\u0430\u0448\u0438\u0432\u0430\u0442\u044C"
+  - questionImage: {fileID: 21300000, guid: 05c2608320523a641bdf083431cde9d1, type: 3}
+    answer: software
+    hint: "\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u043D\u043E\u0435 \u043E\u0431\u0435\u0441\u043F\u0435\u0447\u0435\u043D\u0438\u0435"
+  - questionImage: {fileID: 21300000, guid: db09ebe81aa671948a4db41c1faa77db, type: 3}
+    answer: developer
+    hint: "\u0441\u0442\u0440\u043E\u0438\u0442\u0435\u043B\u044C"
+  - questionImage: {fileID: 21300000, guid: 588579180a7314a45bd36289c52d854c, type: 3}
+    answer: salary
+    hint: "\u0437\u0430\u0440\u043F\u043B\u0430\u0442\u0430"
+  - questionImage: {fileID: 21300000, guid: 19061ffbcaaffb54f91550f3849e7669, type: 3}
+    answer: degree
+    hint: "\u0443\u0447\u0435\u043D\u0430\u044F \u0441\u0442\u0435\u043F\u0435\u043D\u044C"
+  - questionImage: {fileID: 21300000, guid: 29d3fd588bfdef64a971d7a8964acd8a, type: 3}
+    answer: airfare
+    hint: "\u0441\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C \u0430\u0432\u0438\u0430\u0431\u0438\u043B\u0435\u0442\u0430"
+  - questionImage: {fileID: 21300000, guid: 605dd4193931d6143a87baa507a3f627, type: 3}
+    answer: display
+    hint: "\u0434\u0438\u0441\u043F\u043B\u0435\u0439"
+  - questionImage: {fileID: 21300000, guid: b4289634208a77948b2446d8b0c7a574, type: 3}
+    answer: keyboard
+    hint: "\u043A\u043B\u0430\u0432\u0438\u0430\u0442\u0443\u0440\u0430"
+  - questionImage: {fileID: 21300000, guid: 045037f4d57583f40945ee8b086f4544, type: 3}
+    answer: laptop
+    hint: "\u043D\u043E\u0443\u0442\u0431\u0443\u043A"
+  - questionImage: {fileID: 21300000, guid: 59d9e93d1d3a3a84e98fbd3d5421c260, type: 3}
+    answer: look after
+    hint: "\u043F\u0440\u0438\u0441\u043C\u0430\u0442\u0440\u0438\u0432\u0430\u0442\u044C
+      \u0437\u0430 \u043A\u0435\u043C-\u0442\u043E"
+  - questionImage: {fileID: 21300000, guid: b212200dce439504f8d1cbf46bfb1d59, type: 3}
+    answer: look for
+    hint: "\u0438\u0441\u043A\u0430\u0442\u044C"
+  - questionImage: {fileID: 21300000, guid: 159f366b19a65da4785f816ce1faab11, type: 3}
+    answer: look forward
+    hint: "\u0436\u0434\u0430\u0442\u044C \u0447\u0435\u0433\u043E-\u043B\u0438\u0431\u043E
+      \u0441 \u043D\u0435\u0442\u0435\u0440\u043F\u0435\u043D\u0438\u0435\u043C"
+  - questionImage: {fileID: 21300000, guid: 62c76e221091b7d478abe4ab836921a5, type: 3}
+    answer: look up
+    hint: "\u043F\u0440\u043E\u0432\u0435\u0440\u044F\u0442\u044C"
+  - questionImage: {fileID: 21300000, guid: 62c76e221091b7d478abe4ab836921a5, type: 3}
+    answer: look for
+    hint: 
