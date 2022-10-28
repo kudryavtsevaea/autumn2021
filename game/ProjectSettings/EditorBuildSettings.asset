@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/WordQuiz/Scenes/Menu.unity
+    guid: 6c2f59b379396a24a9b599f28ac0f28d
+  - enabled: 1
+    path: Assets/WordQuiz/Scenes/1.unity
+    guid: c3f0cf04174506c429de655339c24d67
+  - enabled: 1
+    path: Assets/WordQuiz/Scenes/2.unity
+    guid: a114a0324a36fd04fa75ebe3571180c8
+  - enabled: 1
+    path: Assets/WordQuiz/Scenes/3.unity
+    guid: 4f537a5c7627b0f40ac05102e967e328
+  - enabled: 1
+    path: Assets/WordQuiz/Scenes/4.unity
+    guid: efc8b95edbc35a149ab54b143c0c3895
+  - enabled: 1
+    path: Assets/WordQuiz/Scenes/5.unity
+    guid: 14484b73c03302545a662998729bada5
+  - enabled: 1
+    path: Assets/WordQuiz/Scenes/6.unity
+    guid: 7389104dc80a0be45acff66645f7fcc0
+  - enabled: 1
+    path: Assets/WordQuiz/Scenes/7.unity
+    guid: f21ce803b4781aa4090f0df354a45717
+  - enabled: 1
+    path: Assets/WordQuiz/Scenes/8.unity
+    guid: 29dea67912319414695c5670c548beb3
+  - enabled: 1
+    path: Assets/WordQuiz/Scenes/9.unity
+    guid: 8572947015aded843969ede6ac40d404
+  - enabled: 1
+    path: Assets/WordQuiz/Scenes/10.unity
+    guid: 8e4189933e8c35c44b45f9f03611d020
+  m_configObjects: {}
